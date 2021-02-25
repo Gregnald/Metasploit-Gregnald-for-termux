@@ -27,6 +27,7 @@ apt-mark hold ruby
 cd metasploit-framework
 bundle config build.nokogiri --use-system-libraries 
 bundle install
+bundle update
 cd
 echo "Creating database"
 mv metasploit-framework-6.0.27 metasploit-framework
