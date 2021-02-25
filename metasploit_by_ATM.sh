@@ -58,10 +58,19 @@ rm $ver.tar.gz
 cd
 rm ruby.deb
 rm rubyarm.deb
+rm README.md
+rm -r Metasploit-avistnm
+echo " 
+
+Just type y and press enter every time you get to enter anything
+
+
+"
+
 clear
 echo "            Installed!!"
 echo " you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms"
 echo "Script created by Avi's Tricks and Methods -- view on YouTube"
-sleep 4.0
+sleep 10.0
 clear
 msfconsole
