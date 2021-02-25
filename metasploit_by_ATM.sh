@@ -59,10 +59,13 @@ mv msfconsole /data/data/com.termux/files/usr/bin
 mv msfvenom /data/data/com.termux/files/usr/bin
 
 rm $ver.tar.gz
-
+cd
+rm ruby.deb
+rm rubyarm.deb
 clear
 echo "            Installed!!"
 echo " you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms"
+echo "Script created by Avi's Tricks and Methods -- view on YouTube"
 sleep 4.0
 clear
 msfconsole
