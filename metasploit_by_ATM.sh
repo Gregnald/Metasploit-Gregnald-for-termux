@@ -1,5 +1,7 @@
 cd
-echo  "INSTALLING REQUIREED PACKAGES"
+echo -e "\e[34mREMOVING OLD METASPLOIT FOLDER(if any)....\e[0m"
+rm -rf metasploit-framework
+echo -e "\e[34mINSTALLING....\e[0m"
 echo -e "\e[34mPACKAGES BEING INSTALLED WAIT....\e[0m"
 pkg update -y 
 pkg upgrade -y
@@ -59,18 +61,8 @@ cd
 rm ruby.deb
 rm rubyarm.deb
 rm README.md
-rm -r Metasploit-avistnm
-echo " 
-
-Just type y and press enter every time you get to enter anything
-
-
-"
-
+rm -rf Metasploit-avistnm
 clear
 echo "            Installed!!"
-echo " you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms"
+echo "Now you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms"
 echo "Script created by Avi's Tricks and Methods -- view on YouTube"
-sleep 10.0
-clear
-msfconsole
