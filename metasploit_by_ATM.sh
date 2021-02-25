@@ -18,11 +18,9 @@ curl -LO https://github.com/rapid7/metasploit-framework/archive/$ver.tar.gz
 cd
 tar -xf $ver.tar.gz
 cd
-if [[ $arc = "aarch64" ]]
-{
+
 apt install -y ./ruby.deb
-}
-else { apt install -y ./rubyarm.deb }
+apt install -y ./rubyarm.deb
 apt-mark hold ruby
 cd /metasploit-framework
 bundle config build.nokogiri --use-system-libraries 
