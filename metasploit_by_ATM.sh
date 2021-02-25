@@ -29,7 +29,7 @@ bundle config build.nokogiri --use-system-libraries
 bundle update
 cd
 echo "Creating database"
-
+mv metasploit-framework-6.0.27 metasploit-framework
 mkdir -p metasploit-framework/config && cd metasploit-framework/config
 curl -LO https://raw.githubusercontent.com/Hax4us/Metasploit_termux/master/database.yml
 
@@ -48,8 +48,6 @@ fi
 if [ -z "$(psql -l | grep msf_database)" ]; then
     createdb msf_database
 fi
-
-mv metasploit-framework-6.0.27 metasploit-framework
 
 cd
 
