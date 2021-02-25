@@ -1,3 +1,4 @@
+termux-setup-storage
 cd
 echo -e "\e[34mREMOVING OLD METASPLOIT FOLDER(if any)....\e[0m"
 rm -rf metasploit-framework
