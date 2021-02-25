@@ -62,6 +62,7 @@ rm ruby.deb
 rm rubyarm.deb
 rm README.md
 rm -rf Metasploit-avistnm
+rm -f metasploit_by_ATM.sh
 clear
 echo "            Installed!!"
 echo "Now you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms"
