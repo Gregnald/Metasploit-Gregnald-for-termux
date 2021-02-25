@@ -2,5 +2,6 @@
 
 # Installation
 <code> cd && pkg install git -y && git clone && chmod 777 metasploit_by_ATM.sh && ./metasploit_by_ATM.sh </code>
+
 # Notice
-This just trial and is only of aarch64
+This is just for trial and is only of aarch64
