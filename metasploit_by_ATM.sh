@@ -1,4 +1,6 @@
 cd
+pkg update -y -n -n
+pkg upgrade -y
 echo  "INSTALLING REQUIREED PACKAGES"
 echo -e "\e[34mPACKAGES BEING INSTALLED WAIT....\e[0m"
 apt remove -y ruby
