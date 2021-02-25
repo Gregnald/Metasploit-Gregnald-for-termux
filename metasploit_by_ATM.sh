@@ -7,6 +7,7 @@ echo -e "\e[34mPACKAGES BEING INSTALLED WAIT....\e[0m"
 pkg update -y 
 pkg upgrade -y
 apt remove -y ruby
+echo -e "\e[34mPLEASE WAIT THIS CAN TAKE UP TO 5 MINUTES....\e[0m"
 apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git apr apr-util libffi libgmp libpcap postgresql readline libsqlite openssl libtool libxml2 libxslt ncurses pkg-config wget make libgrpc termux-tools ncurses-utils ncurses unzip zip tar termux-elf-cleaner
 echo -e "\e[34mPACKAGES INSTALLED SUCCESSFULLY....[\e[92m✓\e[34m]\e[0m"
 echo -e "\033[92m"
