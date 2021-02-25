@@ -1,4 +1,3 @@
-termux-setup-storage
 cd
 echo -e "\e[34mREMOVING OLD METASPLOIT FOLDER(if any)....\e[0m"
 rm -rf metasploit-framework
@@ -11,7 +10,6 @@ echo -e "\e[34mPLEASE WAIT THIS CAN TAKE UP TO 5 MINUTES....\e[0m"
 apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git apr apr-util libffi libgmp libpcap postgresql readline libsqlite openssl libtool libxml2 libxslt ncurses pkg-config wget make libgrpc termux-tools ncurses-utils ncurses unzip zip tar termux-elf-cleaner
 echo -e "\e[34mPACKAGES INSTALLED SUCCESSFULLY....[\e[92m✓\e[34m]\e[0m"
 echo -e "\033[92m"
-center "INSTALLING  METASPLOIT"
 echo -e "\e[34mINSTALLING METASPLOIT....\e[0m"
 cd $HOME
 ln -sf $PREFIX/include/libxml2/libxml $PREFIX/include/
@@ -26,9 +24,9 @@ cd
 apt install -y ./ruby.deb
 apt install -y ./rubyarm.deb
 apt-mark hold ruby
-cd /metasploit-framework
+cd metasploit-framework
 bundle config build.nokogiri --use-system-libraries 
-bundle update
+bundle install
 cd
 echo "Creating database"
 mv metasploit-framework-6.0.27 metasploit-framework
