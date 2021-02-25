@@ -1,7 +1,7 @@
 cd
 echo  "INSTALLING REQUIREED PACKAGES"
 echo -e "\e[34mPACKAGES BEING INSTALLED WAIT....\e[0m"
-pkg update -y -n -n
+pkg update -y 
 pkg upgrade -y
 apt remove -y ruby
 apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git apr apr-util libffi libgmp libpcap postgresql readline libsqlite openssl libtool libxml2 libxslt ncurses pkg-config wget make libgrpc termux-tools ncurses-utils ncurses unzip zip tar termux-elf-cleaner > /dev/null 2>&1
@@ -17,8 +17,6 @@ apt-mark unhold ruby
 curl -LO https://github.com/rapid7/metasploit-framework/archive/$ver.tar.gz
 cd
 tar -xf $ver.tar.gz
-cd
-cp ruby.deb
 cd
 apt install -y ./ruby.deb
 apt-mark hold ruby
