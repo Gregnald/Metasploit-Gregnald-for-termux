@@ -55,7 +55,7 @@ cd
 chmod 777 msfconsole
 chmod 777 msfvenom
 mv msfconsole /data/data/com.termux/files/usr/bin
-mv msfvenom /data/data/com.termux/files/usr/bin
+ln -sf $(which msfconsole) $PREFIX/bin/msfvenom
 
 rm $ver.tar.gz
 cd
