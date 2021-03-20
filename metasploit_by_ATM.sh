@@ -63,6 +63,7 @@ rm rubyarm.deb
 rm README.md
 rm -rf Metasploit-avistnm
 rm -f metasploit_by_ATM.sh
+rm -rf msfvenom
 cd metasploit-framework
 bundle install
 cd
