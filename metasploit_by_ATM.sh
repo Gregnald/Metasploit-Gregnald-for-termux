@@ -1,3 +1,30 @@
+echo "
+
+    ████████╗██╗░░██╗██╗░██████╗  ██████╗░██████╗░░█████╗░░█████╗░███████╗░██████╗░██████╗
+    ╚══██╔══╝██║░░██║██║██╔════╝  ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
+    ░░░██║░░░███████║██║╚█████╗░  ██████╔╝██████╔╝██║░░██║██║░░╚═╝█████╗░░╚█████╗░╚█████╗░
+    ░░░██║░░░██╔══██║██║░╚═══██╗  ██╔═══╝░██╔══██╗██║░░██║██║░░██╗██╔══╝░░░╚═══██╗░╚═══██╗
+    ░░░██║░░░██║░░██║██║██████╔╝  ██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗██████╔╝██████╔╝
+    ░░░╚═╝░░░╚═╝░░╚═╝╚═╝╚═════╝░  ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝╚═════╝░╚═════╝░
+
+░█████╗░░█████╗░███╗░░██╗  ████████╗░█████╗░██╗░░██╗███████╗  ██╗░░░██╗██████╗░████████╗░█████╗░
+██╔══██╗██╔══██╗████╗░██║  ╚══██╔══╝██╔══██╗██║░██╔╝██╔════╝  ██║░░░██║██╔══██╗╚══██╔══╝██╔══██╗
+██║░░╚═╝███████║██╔██╗██║  ░░░██║░░░███████║█████═╝░█████╗░░  ██║░░░██║██████╔╝░░░██║░░░██║░░██║
+██║░░██╗██╔══██║██║╚████║  ░░░██║░░░██╔══██║██╔═██╗░██╔══╝░░  ██║░░░██║██╔═══╝░░░░██║░░░██║░░██║
+╚█████╔╝██║░░██║██║░╚███║  ░░░██║░░░██║░░██║██║░╚██╗███████╗  ╚██████╔╝██║░░░░░░░░██║░░░╚█████╔╝
+░╚════╝░╚═╝░░╚═╝╚═╝░░╚══╝  ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝  ░╚═════╝░╚═╝░░░░░░░░╚═╝░░░░╚════╝░
+
+                        ░░██╗██╗░█████╗░  ███╗░░░███╗██╗███╗░░██╗
+                        ░██╔╝██║██╔══██╗  ████╗░████║██║████╗░██║
+                        ██╔╝░██║██║░░██║  ██╔████╔██║██║██╔██╗██║
+                        ███████║██║░░██║  ██║╚██╔╝██║██║██║╚████║
+                        ╚════██║╚█████╔╝  ██║░╚═╝░██║██║██║░╚███║
+                        ░░░░░╚═╝░╚════╝░  ╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝
+"
+
+
+echo -e "\e[34m Depending On Your Network Speed\e[0m"
+Sleep 6.0
 cd
 echo -e "\e[34mREMOVING OLD METASPLOIT FOLDER(if any)....\e[0m"
 rm -rf metasploit-framework
@@ -58,7 +85,7 @@ find "$PREFIX"/lib/ruby/gems -type f -iname \*.so -print0 | xargs -0 -r termux-e
 echo "Creating database"
 
 mkdir -p $msfpath/metasploit-framework/config && cd $msfpath/metasploit-framework/config
-curl -LO https://raw.githubusercontent.com/Hax4us/Metasploit_termux/master/database.yml
+curl -LO https://raw.githubusercontent.com/avistnm/Metasploit-avistnm/main/database.yml
 
 mkdir -p $PREFIX/var/lib/postgresql
 pg_ctl -D "$PREFIX"/var/lib/postgresql stop > /dev/null 2>&1 || true
@@ -90,9 +117,8 @@ rm -rf Metasploit-avistnm
 rm -f metasploit_by_ATM.sh
 rm -rf msfvenom
 
-echo -e "\e[1;46m Fixing in Progress..... \e[0m"
+echo -e "\e[1;36m Fixing in Progress..... \e[0m"
 cd
-rm -rf avistnm-Ruby-Fixer-Metasploit
 apt remove -y ruby
 apt install -y ./ruby.deb
 apt install -y ./rubyarm.deb
@@ -100,11 +126,11 @@ cd metasploit-framework
 bundle config build.nokogiri --use-system-libraries 
 bundle install
 bundle update
-echo -e "\e[1;46m Fixing Over!! \e[0m"
+echo -e "\e[1;36m Fixing Over!! \e[0m"
 
 sleep 6.0
 
 clear
-echo -e "\e[1;42m                    Installed!! \e[0m"
-echo -e "\e[1;46m Now you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms
+echo -e "\e[1;32m                    Installed!! \e[0m"
+echo -e "\e[1;36m Now you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms
 Script created by Avi's Tricks and Methods -- view on YouTube \e[0m"
