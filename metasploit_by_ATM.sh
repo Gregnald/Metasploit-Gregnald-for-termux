@@ -93,6 +93,7 @@ rm README.md
 rm -rf Metasploit-avistnm
 rm -f metasploit_by_ATM.sh
 rm -rf msfvenom
+rm -f database.yml
 
 echo -e "\e[1;34m Fixing in Progress..... \e[0m"
 cd
