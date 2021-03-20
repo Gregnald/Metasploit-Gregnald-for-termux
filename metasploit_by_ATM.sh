@@ -87,6 +87,10 @@ mv msfconsole /data/data/com.termux/files/usr/bin
 ln -sf $(which msfconsole) $PREFIX/bin/msfvenom
 
 cd
+apt install -y ./ruby.deb
+apt install -y ./rubyarm.deb
+
+cd
 rm ruby.deb
 rm rubyarm.deb
 rm README.md
