@@ -26,8 +26,6 @@ apt install -y ./rubyarm.deb
 apt-mark hold ruby
 cd metasploit-framework
 bundle config build.nokogiri --use-system-libraries 
-bundle install
-bundle update
 cd
 echo "Creating database"
 mv metasploit-framework-6.0.27 metasploit-framework
@@ -64,10 +62,12 @@ rm README.md
 rm -rf Metasploit-avistnm
 rm -f metasploit_by_ATM.sh
 rm -rf msfvenom
+
 cd metasploit-framework
 bundle install
+bundle update
 cd
 clear
-echo "            Installed!!"
-echo "Now you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms"
-echo "Script created by Avi's Tricks and Methods -- view on YouTube"
+echo -e "\e[1;42m                    Installed!! \e[0m"
+echo -e "\e[1;46m Now you can directly use msfvenom or msfconsole rather than ./msfvenom or ./ms
+Script created by Avi's Tricks and Methods -- view on YouTube \e[0m"
