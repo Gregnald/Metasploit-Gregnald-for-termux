@@ -1,4 +1,4 @@
-apt install lolcat -y
+pkg install lolcat -y
 lolcat timewarn.sh
 echo -e "\e[34m Depending On Your Network Speed\e[0m"
 Sleep 6.0
