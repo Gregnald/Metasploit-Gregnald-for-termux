@@ -1,4 +1,5 @@
 pkg install lolcat -y
+arc=$(dpkg --print-architecture)
 lolcat timewarn.sh
 echo -e "\e[34m Depending On Your Network Speed\e[0m"
 Sleep 6.0
@@ -86,9 +87,19 @@ chmod 777 msfconsole
 mv msfconsole /data/data/com.termux/files/usr/bin
 ln -sf $(which msfconsole) $PREFIX/bin/msfvenom
 
+#Remove Ruby
+apt remove ruby -y
+
+#Install Ruby
 cd
+if [[ $arc = "aarch64" ]];
+then
 apt install -y ./ruby.deb
+fi
+if [[ $arc = "arm" ]];
+then
 apt install -y ./rubyarm.deb
+fi
 
 cd
 rm ruby.deb
@@ -102,8 +113,6 @@ rm -f database.yml
 echo -e "\e[1;34m Fixing in Progress..... \e[0m"
 cd
 apt remove -y ruby
-apt install -y ./ruby.deb
-apt install -y ./rubyarm.deb
 cd metasploit-framework
 bundle config build.nokogiri --use-system-libraries 
 bundle install
