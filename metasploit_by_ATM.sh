@@ -32,6 +32,9 @@ apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git a
 # Many phones are claiming libxml2 not found error
 ln -sf $PREFIX/include/libxml2/libxml $PREFIX/include/
 
+#ruby 2.7.x
+apt install -y ./ruby.deb
+
 cd $msfpath
 curl -LO https://github.com/rapid7/metasploit-framework/archive/$msfvar.tar.gz
 
