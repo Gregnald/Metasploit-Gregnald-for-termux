@@ -1,4 +1,4 @@
-pkg install ruby -y
+apt install -y ./ruby.deb
 gem install lolcat
 lolcat timewarn.sh
 echo -e "\e[34m Depending On Your Network Speed\e[0m"
