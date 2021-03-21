@@ -1,4 +1,5 @@
-pkg install lolcat -y
+pkg install ruby -y
+gem install lolcat
 arc=$(dpkg --print-architecture)
 lolcat timewarn.sh
 echo -e "\e[34m Depending On Your Network Speed\e[0m"
