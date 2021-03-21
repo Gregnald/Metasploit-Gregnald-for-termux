@@ -14,14 +14,6 @@ echo -e "\e[34mREMOVING OLD METASPLOIT FOLDER(if any)....\e[0m"
 # Remove  Old Folder if exist 
 find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
 
-echo -e "\e[34mINSTALLING....\e[0m"
-echo -e "\e[34mPACKAGES BEING INSTALLED WAIT....\e[0m"
-pkg update -y -n
-pkg upgrade -y
-echo -e "\e[34mPLEASE WAIT THIS CAN TAKE UP TO 5 MINUTES....\e[0m"
-apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git apr apr-util libffi libgmp libpcap postgresql readline libsqlite openssl libtool libxml2 libxslt ncurses pkg-config wget make libgrpc termux-tools ncurses-utils ncurses unzip zip tar termux-elf-cleaner
-echo -e "\e[34mPACKAGES INSTALLED SUCCESSFULLY....[\e[92m✓\e[34m]\e[0m"
-echo -e "\033[92m"
 echo -e "\e[34mINSTALLING METASPLOIT....\e[0m"
 #!/data/data/com.termux/files/usr/bin/bash
 
