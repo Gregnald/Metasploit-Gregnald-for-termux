@@ -3,13 +3,14 @@ arc=$(dpkg --print-architecture)
 
 #ruby 2.7.0 install
 cd
-elif [[ $arc = "aarch64" ]];
+if [[ $arc = "aarch64" ]];
 then
 apt install -y --allow-downgrades ./ruby.deb
-fi
-if [[ $arc = "arm" ]];
+elif [[ $arc = "arm" ]];
 then
 apt install -y --allow-downgrades ./rubyarm.deb
+else
+break;
 fi
 
 #lolcat
