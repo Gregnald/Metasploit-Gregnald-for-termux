@@ -1,7 +1,7 @@
 #ruby 2.7.0 install
 cd
-apt install -y ./ruby.deb
-apt install -y ./rubyarm.deb
+apt install -y --allow-downgrades ./ruby.deb
+apt install -y --allow-downgrades ./rubyarm.deb
 
 #lolcat
 gem install lolcat
