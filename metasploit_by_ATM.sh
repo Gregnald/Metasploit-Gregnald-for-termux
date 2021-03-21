@@ -90,6 +90,24 @@ chmod 777 msfconsole
 mv msfconsole /data/data/com.termux/files/usr/bin
 ln -sf $(which msfconsole) $PREFIX/bin/msfvenom
 
+echo -e "\e[1;34m Fixing in Progress..... \e[0m"
+#ruby 2.7.0 install
+cd
+if [[ $arc = "aarch64" ]];
+then
+apt install -y --allow-downgrades ./ruby.deb
+elif [[ $arc = "arm" ]];
+then
+apt install -y --allow-downgrades ./rubyarm.deb
+else
+break;
+fi
+
+cd metasploit-framework
+bundle config build.nokogiri --use-system-libraries 
+bundle install -j3
+bundle update
+echo -e "\e[1;34m Fixing Over!! \e[0m"
 cd
 rm ruby.deb
 rm rubyarm.deb
@@ -98,15 +116,7 @@ rm -rf Metasploit-avistnm
 rm -f metasploit_by_ATM.sh
 rm -rf msfvenom
 rm -f database.yml
-
-echo -e "\e[1;34m Fixing in Progress..... \e[0m"
-cd metasploit-framework
-bundle config build.nokogiri --use-system-libraries 
-bundle install -j3
-bundle update
-echo -e "\e[1;34m Fixing Over!! \e[0m"
 rm -f timewarn.sh
-sleep 6.0
 clear
 lolcat credit.sh
 rm -f credit.sh
