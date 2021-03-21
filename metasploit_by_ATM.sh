@@ -1,6 +1,5 @@
 pkg install ruby -y
 gem install lolcat
-arc=$(dpkg --print-architecture)
 lolcat timewarn.sh
 echo -e "\e[34m Depending On Your Network Speed\e[0m"
 Sleep 6.0
@@ -93,14 +92,8 @@ apt remove ruby -y
 
 #Install Ruby
 cd
-if [[ $arc = "aarch64" ]];
-then
 apt install -y ./ruby.deb
-fi
-if [[ $arc = "arm" ]];
-then
 apt install -y ./rubyarm.deb
-fi
 
 cd
 rm ruby.deb
