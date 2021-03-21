@@ -95,6 +95,9 @@ cd
 apt install -y ./ruby.deb
 apt install -y ./rubyarm.deb
 
+#lolcat
+gem install lolcat
+
 cd
 rm ruby.deb
 rm rubyarm.deb
