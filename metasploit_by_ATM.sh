@@ -1,3 +1,6 @@
+apt update -y
+apt upgrade -y
+
 #arch check
 arc=$(dpkg --print-architecture)
 
@@ -32,8 +35,6 @@ cwd=$(pwd)
 msfvar=6.0.33
 msfpath='/data/data/com.termux/files/home'
 
-apt update -y
-apt upgrade -y
 # Temporary 
 apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git apr apr-util libffi libgmp libpcap postgresql readline libsqlite openssl libtool libxml2 libxslt ncurses pkg-config wget make libgrpc termux-tools ncurses-utils ncurses unzip zip tar termux-elf-cleaner
 # Many phones are claiming libxml2 not found error
@@ -91,18 +92,6 @@ mv msfconsole /data/data/com.termux/files/usr/bin
 ln -sf $(which msfconsole) $PREFIX/bin/msfvenom
 
 echo -e "\e[1;34m Fixing in Progress..... \e[0m"
-#ruby 2.7.0 install
-cd
-if [[ $arc = "aarch64" ]];
-then
-apt install -y --allow-downgrades ./ruby.deb
-elif [[ $arc = "arm" ]];
-then
-apt install -y --allow-downgrades ./rubyarm.deb
-else
-break;
-fi
-
 cd metasploit-framework
 bundle config build.nokogiri --use-system-libraries 
 bundle install -j3
