@@ -6,11 +6,10 @@ cd
 elif [[ $arc = "aarch64" ]];
 then
 apt install -y --allow-downgrades ./ruby.deb
-elif [[ $arc = "arm" ]];
+fi
+if [[ $arc = "arm" ]];
 then
 apt install -y --allow-downgrades ./rubyarm.deb
-else
-break;
 fi
 
 #lolcat
