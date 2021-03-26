@@ -4,6 +4,9 @@ apt upgrade -y
 #arch check
 arc=$(dpkg --print-architecture)
 
+#ruby remove
+apt remove ruby -y
+
 #ruby 2.7.0 install
 cd
 if [[ $arc = "aarch64" ]];
@@ -32,7 +35,7 @@ echo -e "\e[34mINSTALLING METASPLOIT....\e[0m"
 
 
 cwd=$(pwd)
-msfvar=6.0.33
+msfvar=6.0.37
 msfpath='/data/data/com.termux/files/home'
 
 # Temporary 
@@ -41,7 +44,7 @@ apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git a
 ln -sf $PREFIX/include/libxml2/libxml $PREFIX/include/
 
 cd $msfpath
-curl -LO https://github.com/rapid7/metasploit-framework/archive/$msfvar.tar.gz
+curl -LO https://github.com/rapid7/metasploit-framework/archive/refs/tags/$msfvar.tar.gz
 
 tar -xf $msfpath/$msfvar.tar.gz
 mv $msfpath/metasploit-framework-$msfvar $msfpath/metasploit-framework
