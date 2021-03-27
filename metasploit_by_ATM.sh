@@ -39,7 +39,7 @@ msfvar=6.0.37
 msfpath='/data/data/com.termux/files/home'
 
 # Temporary 
-apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git apr apr-util libffi libgmp libpcap postgresql readline libsqlite openssl libtool libxml2 libxslt ncurses pkg-config wget make libgrpc termux-tools ncurses-utils ncurses unzip zip tar termux-elf-cleaner
+apt install -y libiconv zlib autoconf bison clang coreutils curl findutils git apr apr-util libffi libgmp libpcap postgresql readline libsqlite openssl libtool libxml2 libxslt ncurses pkg-config wget make libgrpc termux-tools ncurses-utils ncurses unzip zip tar termux-elf-cleaner > /dev/null 2>&1
 # Many phones are claiming libxml2 not found error
 ln -sf $PREFIX/include/libxml2/libxml $PREFIX/include/
 
