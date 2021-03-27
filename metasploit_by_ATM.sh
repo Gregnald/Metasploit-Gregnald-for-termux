@@ -5,7 +5,7 @@ apt upgrade -y
 arc=$(dpkg --print-architecture)
 
 #ruby remove
-apt remove ruby -y
+apt remove -y ruby
 
 #ruby 2.7.0 install
 cd
