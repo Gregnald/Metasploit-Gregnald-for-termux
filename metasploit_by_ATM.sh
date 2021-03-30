@@ -90,9 +90,8 @@ rm $msfpath/$msfvar.tar.gz
 
 cd
 
-chmod 777 msfconsole
-mv msfconsole /data/data/com.termux/files/usr/bin
-ln -sf $(which msfconsole) $PREFIX/bin/msfvenom
+ln -s $HOME/metasploit-framework/msfconsole /data/data/com.termux/files/usr/bin/
+ln -s $HOME/metasploit-framework/msfvenom /data/data/com.termux/files/usr/bin/
 
 echo -e "\e[1;34m Fixing in Progress..... \e[0m"
 cd metasploit-framework
