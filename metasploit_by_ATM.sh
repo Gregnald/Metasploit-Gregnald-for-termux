@@ -1,5 +1,10 @@
 apt update -y >/dev/null 2>&1
 apt upgrade -y >/dev/null 2>&1
+pkg upgrade -y -o Dpkg::Options::="--force-confnew" >/dev/null 2>&1
+pkg install -y python autoconf bison clang coreutils curl findutils apr apr-util postgresql openssl readline libffi libgmp libpcap libsqlite libgrpc libtool libxml2 libxslt ncurses make ncurses-utils ncurses git wget unzip zip tar termux-tools termux-elf-cleaner pkg-config git ruby -o Dpkg::Options::="--force-confnew" >/dev/null 2>&1
+
+python3 -m pip install --upgrade pip >/dev/null 2>&1
+python3 -m pip install requests >/dev/null 2>&1
 
 #arch check
 arc=$(dpkg --print-architecture)
