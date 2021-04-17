@@ -1,0 +1,5 @@
+#!/data/data/com.termux/files/usr/bin/bash
+echo -e "\e[34m Installing core files\e[0m"
+cd && pkg install git -y && git clone https://github.com/avistnm/Metasploit-avistnm.git && cd Metasploit-avistnm && mv * /data/data/com.termux/files/home && cd && chmod 777 metasploit_by_ATM.sh >/dev/null 2>&1
+center -e "\e[34m Installation Success!!\e[0m"
+./metasploit_by_ATM.sh
