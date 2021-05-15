@@ -109,6 +109,7 @@ rm -f metasploit_by_ATM.sh
 rm -rf msfvenom
 rm -f database.yml
 rm -f timewarn.sh
+rm -rf install
 clear
 lolcat credit.sh
 rm -f credit.sh
