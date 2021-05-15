@@ -1,27 +1,27 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-apt install ruby -y
+apt install ruby -y >/dev/null 2>&1
 
 #arch check
 arc=$(dpkg --print-architecture)
 
 #ruby remove
-apt remove -y ruby
+apt remove -y ruby >/dev/null 2>&1
 
 #ruby 2.7.0 install
-cd
+cd >/dev/null 2>&1
 if [[ $arc = "aarch64" ]];
 then
-apt install -y --allow-downgrades ./ruby.deb
+apt install -y --allow-downgrades ./ruby.deb >/dev/null 2>&1
 elif [[ $arc = "arm" ]];
 then
-apt install -y --allow-downgrades ./rubyarm.deb
+apt install -y --allow-downgrades ./rubyarm.deb >/dev/null 2>&1
 else
-exit 1
+break;
 fi
 
 #lolcat
-gem install lolcat
+gem install lolcat -y >/dev/null 2>&1
 
 lolcat timewarn.sh
 echo -e "\e[34m Depending On Your Network Speed\e[0m"
