@@ -1,3 +1,7 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+apt install ruby -y
+
 #arch check
 arc=$(dpkg --print-architecture)
 
