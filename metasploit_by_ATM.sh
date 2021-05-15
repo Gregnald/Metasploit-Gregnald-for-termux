@@ -6,22 +6,22 @@ apt install ruby -y
 arc=$(dpkg --print-architecture)
 
 #ruby remove
-apt remove -y ruby >/dev/null 2>&1
+apt remove -y ruby
 
 #ruby 2.7.0 install
-cd >/dev/null 2>&1
+cd
 if [[ $arc = "aarch64" ]];
 then
-apt install -y --allow-downgrades ./ruby.deb >/dev/null 2>&1
+apt install -y --allow-downgrades ./ruby.deb
 elif [[ $arc = "arm" ]];
 then
-apt install -y --allow-downgrades ./rubyarm.deb >/dev/null 2>&1
+apt install -y --allow-downgrades ./rubyarm.deb
 else
-break;
+exit 1
 fi
 
 #lolcat
-gem install lolcat >/dev/null 2>&1
+gem install lolcat
 
 lolcat timewarn.sh
 echo -e "\e[34m Depending On Your Network Speed\e[0m"
