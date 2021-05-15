@@ -112,5 +112,6 @@ rm -f timewarn.sh
 clear
 lolcat credit.sh
 rm -f credit.sh
+rm -rf Metasploit-Cody*
 echo -e "\e[1;32m                    Installed!! \e[0m"
 echo -e "\e[1;34m Now you can directly use msfvenom or msfconsole rather than ./msfvenom or ./msfconsole \e[0m"
