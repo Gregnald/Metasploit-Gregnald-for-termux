@@ -7,4 +7,4 @@ Just run this code :
 <code>apt install wget -y && wget https://raw.githubusercontent.com/CodyAvi/Metasploit-CodyAvi/main/install && bash install</code>
 # Notice
 This is now finely working with aarch64 and arm systems......
-##This project is now discontinued!!
+## This project is now discontinued!!
